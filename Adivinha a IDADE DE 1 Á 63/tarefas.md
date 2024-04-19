@@ -12,11 +12,11 @@ _**Menu**_
 
 _**Jogar**_ 
 
-- [ ] Explicação do jogo
-- [ ] Primeira CARTA
-- [ ] Segunda CARTA
-- [ ] Terceira CARTA
-- [ ] Quarta CARTA
+- [x] Explicação do jogo
+- [x] Primeira CARTA
+- [x] Segunda CARTA
+- [x] Terceira CARTA
+- [x] Quarta CARTA
 - [ ] Quinta CARTA
 - [ ] Sexta CARTA
 - [ ] Tela de resposta e finalização

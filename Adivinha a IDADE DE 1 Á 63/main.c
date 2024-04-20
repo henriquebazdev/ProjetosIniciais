@@ -380,7 +380,7 @@ int coleta()
 
 int analise(int vetor[6])
 {
-	printf("%s \n", vetor[0]);
+	printf("%s \n", vetor[0]); //excluir
 	printf("%s \n", vetor[1]);
 	printf("%s \n", vetor[2]);
 	printf("%s \n", vetor[3]);
@@ -418,10 +418,58 @@ int analise(int vetor[6])
 	}
 	else 
 	{
-		printf("%d\n", sim);
-		printf("%d\n", nao);
-		printf("Vamos analisar!\n");
-		system("pause");
+		//criação vetor principal
+		int vetor_principal[63];
+		int k;
+		int e = 1;
+		for (k = 0; k < 63; k++)
+		{
+			vetor_principal[k] = e;
+			printf("%d ", vetor_principal[k]); //excluir
+			e++;
+		}
+		
+		//verificação primeira carta
+		if (vetor[0] == "N")
+		{
+			int primeira_carta[8][4];
+			int linha, coluna = 0;
+			int aux = 1;
+			for (linha = 0; linha < 8; linha++)
+			{
+				for (coluna = 0; coluna < 4; coluna++)
+				{
+					primeira_carta[linha][coluna] = aux;
+					aux+=2;
+				}
+			}
+			
+			int l, c = 0;
+			int j = 0;
+			for (j = 0; j < 63; j++)
+			{
+				for (l = 0; l < 8; l++)
+				{
+					for (c = 0; c < 4; c++)
+					{		
+						if (primeira_carta[l][c] == vetor_principal[j])
+						{
+							vetor_principal[j] = 0;
+							j++;
+						}
+					}
+				}
+			}
+			
+			for (k = 0; k < 63; k++)
+			{
+				printf("%d ", vetor_principal[k]); //excluir
+			}
+			printf("\n");
+			system("pause");
+		}
+		
+		//verificação segunda carta
 	}
 }
 

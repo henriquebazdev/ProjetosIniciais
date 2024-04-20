@@ -17,7 +17,7 @@ _**Jogar**_
 - [x] Segunda CARTA
 - [x] Terceira CARTA
 - [x] Quarta CARTA
-- [ ] Quinta CARTA
-- [ ] Sexta CARTA
-- [ ] Tela de resposta e finalização
+- [x] Quinta CARTA
+- [x] Sexta CARTA
+- [x] Tela de resposta e finalização
 - [ ] Função continuar

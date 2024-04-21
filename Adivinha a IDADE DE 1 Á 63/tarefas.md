@@ -20,4 +20,5 @@ _**Jogar**_
 - [x] Quinta CARTA
 - [x] Sexta CARTA
 - [x] Tela de resposta e finalização
-- [ ] Função continuar
+- [x] Função continuar
+

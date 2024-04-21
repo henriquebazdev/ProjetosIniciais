@@ -6,8 +6,7 @@
 
 int primeira_carta()
 {	
-	int x = 0;
-	for (x = 0; x == 0;)
+	for (;;)
 	{
 		system("cls"); 
 		int primeira_carta[8][4];
@@ -34,14 +33,14 @@ int primeira_carta()
 			system("cls");
 			printf("Ok! O número pensado esta nesta carta...\n");
 			system("pause");
-			return "S";
+			return 1;
 		}
 		else if (strcmp(opcao, "N") == 0 || strcmp(opcao, "n") == 0)
 		{
 			system("cls");
 			printf("Ok! O número pensado não esta nesta carta...\n");
 			system("pause");
-			return "N";
+			return 0;
 		}
 		else
 		{
@@ -56,9 +55,8 @@ int primeira_carta()
 
 
 int segunda_carta()
-{	
-	int x = 0;
-	for (x = 0; x == 0;)
+{
+	for (;;)
 	{
 		system("cls");
 		int segunda_carta[8][4];
@@ -94,14 +92,14 @@ int segunda_carta()
 			system("cls");
 			printf("Ok! O número pensado esta nesta carta...\n");
 			system("pause");
-			return "S";
+			return 2;
 		}
 		else if (strcmp(opcao, "N") == 0 || strcmp(opcao, "n") == 0)
 		{
 			system("cls");
 			printf("Ok! O número pensado não esta nesta carta...\n");
 			system("pause");
-			return "N";
+			return 0;
 		}
 		else
 		{
@@ -117,8 +115,7 @@ int segunda_carta()
 
 int terceira_carta()
 {	
-	int x = 0;
-	for (x = 0; x == 0;)
+	for (;;)
 	{
 		system("cls");
 		int terceira_carta[8][4];
@@ -154,14 +151,14 @@ int terceira_carta()
 			system("cls");
 			printf("Ok! O número pensado esta nesta carta...\n");
 			system("pause");
-			return "S";
+			return 4;
 		}
 		else if (strcmp(opcao, "N") == 0 || strcmp(opcao, "n") == 0)
 		{
 			system("cls");
 			printf("Ok! O número pensado não esta nesta carta...\n");
 			system("pause");
-			return "N";
+			return 0;
 		}
 		else
 		{
@@ -177,8 +174,7 @@ int terceira_carta()
 
 int quarta_carta()
 {	
-	int x = 0;
-	for (x = 0; x == 0;)
+	for (;;)
 	{
 		system("cls");
 		int quarta_carta[8][4];
@@ -214,14 +210,14 @@ int quarta_carta()
 			system("cls");
 			printf("Ok! O número pensado esta nesta carta...\n");
 			system("pause");
-			return "S";
+			return 8;
 		}
 		else if (strcmp(opcao, "N") == 0 || strcmp(opcao, "n") == 0)
 		{
 			system("cls");
 			printf("Ok! O número pensado não esta nesta carta...\n");
 			system("pause");
-			return "N";
+			return 0;
 		}
 		else
 		{
@@ -236,8 +232,7 @@ int quarta_carta()
 
 int quinta_carta()
 {	
-	int x = 0;
-	for (x = 0; x == 0;)
+	for (;;)
 	{
 		system("cls");
 		int quinta_carta[8][4];
@@ -273,14 +268,14 @@ int quinta_carta()
 			system("cls");
 			printf("Ok! O número pensado esta nesta carta...\n");
 			system("pause");
-			return "S";
+			return 16;
 		}
 		else if (strcmp(opcao, "N") == 0 || strcmp(opcao, "n") == 0)
 		{
 			system("cls");
 			printf("Ok! O número pensado não esta nesta carta...\n");
 			system("pause");
-			return "N";
+			return 0;
 		}
 		else
 		{
@@ -295,9 +290,8 @@ int quinta_carta()
 
 
 int sexta_carta()
-{	
-	int x = 0;
-	for (x = 0; x == 0;)
+{
+	for (;;)
 	{
 		system("cls");
 		int sexta_carta[8][4];
@@ -324,14 +318,14 @@ int sexta_carta()
 			system("cls");
 			printf("Ok! O número pensado esta nesta carta...\n");
 			system("pause");
-			return "S";
+			return 32;
 		}
 		else if (strcmp(opcao, "N") == 0 || strcmp(opcao, "n") == 0)
 		{
 			system("cls");
 			printf("Ok! O número pensado não esta nesta carta...\n");
 			system("pause");
-			return "N";
+			return 0;
 		}
 		else
 		{
@@ -348,130 +342,41 @@ int sexta_carta()
 int coleta()
 {
 	
-	int respostas[6];
-	int dado;
+	int contador = 0;
 	
 	//primeira carta
-	dado = primeira_carta();
-	respostas[0] = dado;
+	contador += primeira_carta();
 	
 	//segunda carta
-	dado = segunda_carta();
-	respostas[1] = dado;
+	contador += segunda_carta();
 	
 	//terceira carta
-	dado = terceira_carta();
-	respostas[2] = dado;
+	contador += terceira_carta();
 	
 	//quarta carta
-	dado = quarta_carta();
-	respostas[3] = dado;
+	contador += quarta_carta();
 	
 	//quinta carta
-	dado = quinta_carta();
-	respostas[4] = dado;
+	contador += quinta_carta();
 	
 	//sexta carta
-	dado = sexta_carta();
-	respostas[5] = dado;
+	contador += sexta_carta();
 	
-	analise(respostas);
-}
-
-int analise(int vetor[6])
-{
-	printf("%s \n", vetor[0]); //excluir
-	printf("%s \n", vetor[1]);
-	printf("%s \n", vetor[2]);
-	printf("%s \n", vetor[3]);
-	printf("%s \n", vetor[4]);
-	printf("%s \n", vetor[5]);
-	
-	system("pause");
-	system("cls");
-	
-	int e;
-	int sim = 0;
-	int nao = 0;
-	for (e = 0; e < 6; e++)
+	if (contador == 0)
 	{
-		if (vetor[e] == "N")
-		{
-			nao++;
-		}
-		else if (vetor[e] == "S")
-		{
-			sim++;
-		}
-	}
-	
-	if (sim == 6)
-	{
-		final(63);
-	}
-	else if (nao == 6)
-	{
-		printf("Você não pensou em um número válido!\n");
+		system("cls");
+		printf("Número pensado é inválido!\n");
 		printf("Tente novamente...\n");
 		system("pause");
-		jogar();
+		coleta();
 	}
-	else 
+	else
 	{
-		//criação vetor principal
-		int vetor_principal[63];
-		int k;
-		int e = 1;
-		for (k = 0; k < 63; k++)
-		{
-			vetor_principal[k] = e;
-			printf("%d ", vetor_principal[k]); //excluir
-			e++;
-		}
-		
-		//verificação primeira carta
-		if (vetor[0] == "N")
-		{
-			int primeira_carta[8][4];
-			int linha, coluna = 0;
-			int aux = 1;
-			for (linha = 0; linha < 8; linha++)
-			{
-				for (coluna = 0; coluna < 4; coluna++)
-				{
-					primeira_carta[linha][coluna] = aux;
-					aux+=2;
-				}
-			}
-			
-			int l, c = 0;
-			int j = 0;
-			for (j = 0; j < 63; j++)
-			{
-				for (l = 0; l < 8; l++)
-				{
-					for (c = 0; c < 4; c++)
-					{		
-						if (primeira_carta[l][c] == vetor_principal[j])
-						{
-							vetor_principal[j] = 0;
-							j++;
-						}
-					}
-				}
-			}
-			
-			for (k = 0; k < 63; k++)
-			{
-				printf("%d ", vetor_principal[k]); //excluir
-			}
-			printf("\n");
-			system("pause");
-		}
-		
-		//verificação segunda carta
+		final(contador);
 	}
 }
+
+
 
 int final(int resultado)
 {
@@ -480,6 +385,37 @@ int final(int resultado)
 	printf("O número pensado é: %d", resultado);
 	printf("\n\n");
 	system("pause");
+	
+	for (;;)
+	{
+		system("cls");
+		int opcao = 0;
+		printf("1 - Continuar a jogar\n");
+		printf("2 - Sair do jogo\n");
+		printf("Opção: ");
+		scanf("%d", &opcao);
+		
+		while(getchar() != '\n');
+		
+		if (opcao == 1)
+		{
+			jogar();
+			break;
+		}
+		else if (opcao == 2)
+		{
+			sair();
+			break;
+		}
+		else
+		{
+			system("cls");
+			printf("Opção inválida!\n");
+			printf("Tente novamente...\n");
+			system("pause");
+		}
+	}
+	return 0;
 }
 
 
@@ -504,10 +440,9 @@ int jogar()
 int main() 
 {	
 	setlocale(LC_ALL, "Portuguese");
+
 	
-	int x = 0; 
-	
-	for (x = 1; x == 1;)
+	for (;;)
 	{	
 		int opcao = 0;
 		
@@ -520,24 +455,36 @@ int main()
 		printf("Opção: ");
 		scanf("%d", &opcao);
 		
-		switch (opcao) 
+		while(getchar() != '\n');
+		
+		if (opcao == 1)
 		{
-			case 1:
-				jogar();
-				break;
-			case 2:
-				system("cls");
-				printf("Encerrando...\n");
-				printf("Obrigado, volte sempre!\n");
-				system("pause");
-				return 0;
-				break;
-			default:
-				system("cls");
-				printf("Opção inválida! Tente novamente...\n\n");
-				system("pause");
-				break;
+			jogar();
+			break;
+		}
+		else if (opcao == 2)
+		{
+			sair();
+			break;
+		}
+		else
+		{
+			system("cls");
+			printf("Opção inválida! Tente novamente...\n\n");
+			system("pause");	
 		}
 	}
+	return 0;
+}
+
+
+
+int sair()
+{
+	system("cls");
+	printf("Encerrando...\n");
+	printf("Volte sempre!\n");
+	system("pause");
+	return 0;
 }
 

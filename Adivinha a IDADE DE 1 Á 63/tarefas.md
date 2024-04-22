@@ -6,7 +6,7 @@ _**Menu**_
 
 - [x] 1 - Jogar
 - [x] 2 - Sair do jogo
-- [x] Tratamento de Excessões
+- [x] Tratamento de Excesções
 
 
 

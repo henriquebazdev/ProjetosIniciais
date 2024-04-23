@@ -5,7 +5,8 @@ def jogar1x1():
     os.system("cls")
     matriz_principal = [[1, 2, 3], [4, 5 , 6], [7, 8, 9]]
     jogadas = 0
-    while True:
+    continuar = 'S'
+    while continuar == 'S':
         try:
             if jogadas % 2 == 0:
                 print('JOGADOR 1', end='\n')
@@ -76,10 +77,111 @@ def jogar1x1():
             sleep(1)
             os.system("cls")
 
+        cont_x = 0
+        cont_o = 0
+        #verificação em linha
+        for l in range(0, 3):
+            cont_x = 0
+            cont_o = 0
+            for c in range(0, 3):
+                if matriz_principal[l][c] == 'X':
+                    cont_x += 1
+                elif matriz_principal[l][c] == 'O':
+                    cont_o += 1                  
+            if cont_x == 3:
+                os.system("cls")
+                print("JOGADOR 1 VENCEU A PARTIDA!")
+                os.system("pause")
+                continuar = 'N'
+                break
+            elif cont_o == 3:
+                os.system("cls")
+                print("JOGADOR 2 VENCEU A PARTIDA!")
+                os.system("pause")
+                continuar = 'N'
+                break
+        
+        cont_x = 0
+        cont_o = 0
+        #vericação em coluna
+        for c in range(0, 3):
+            cont_x = 0
+            cont_o = 0
+            for l in range(0, 3):
+                if matriz_principal[l][c] == 'X':
+                    cont_x += 1
+                elif matriz_principal[l][c] == 'O':
+                    cont_o += 1
+            if cont_x == 3:
+                os.system("cls")
+                print("JOGADOR 1 VENCEU A PARTIDA!")
+                os.system("pause")
+                continuar = 'N'
+                break
+            elif cont_o == 3:
+                os.system("cls")
+                print("JOGADOR 2 VENCEU A PARTIDA!")
+                os.system("pause")
+                continuar = 'N'
+                break
+        
+        #verificação em diagonal 1 a 3
+        cont_x = 0
+        cont_o = 0
+        for l in range(0, 3):
+            for c in range(0, 3):
+                if l == c:
+                    if matriz_principal[l][c] == 'X':
+                        cont_x += 1
+                    elif matriz_principal[l][c] == 'O':
+                        cont_o += 1
+            if cont_x == 3:
+                os.system("cls")
+                print("JOGADOR 1 VENCEU A PARTIDA!")
+                os.system("pause")
+                continuar = 'N'
+                break
+            elif cont_o == 3:
+                os.system("cls")
+                print("JOGADOR 2 VENCEU A PARTIDA!")
+                os.system("pause")
+                continuar = 'N'
+                break
+        
+        #verificação em diagonal 3 a 7
+        cont_x = 0
+        cont_o = 0
+        for l in range(0, 3):
+            for c in range(0, 3):
+                if (l == 0 and c == 2) or (l == 1 and c == 1) or (l == 2 and c == 0):
+                    if matriz_principal[l][c] == 'X':
+                        cont_x += 1
+                    elif matriz_principal[l][c] == 'O':
+                        cont_o += 1
+            if cont_x == 3:
+                os.system("cls")
+                print("JOGADOR 1 VENCEU A PARTIDA!")
+                os.system("pause")
+                continuar = 'N'
+                break
+            elif cont_o == 3:
+                os.system("cls")
+                print("JOGADOR 2 VENCEU A PARTIDA!")
+                os.system("pause")
+                continuar = 'N'
+                break
+
+        if (jogadas == 9 and continuar == 'S'):
+            os.system("cls")
+            print("O JOGO FICOU EMPATADO!")
+            os.system("pause")
+            continuar = 'N'
+            break
+
 #Menu inicial
 while True:
     os.system("cls")
-
+    
     try:
         print("=-" * 20)
         print("{:^40}".format('JOGO DA VELHA'))
@@ -88,13 +190,12 @@ while True:
         print("     2 - Sair")
         op = int(input("Opção: "))
 
-        os.system("cls")
-
         match op:
             case 1:
                 jogar1x1()
                 sleep(1)
             case 2:
+                os.system("cls")
                 print("Encerrando o jogo...")
                 sleep(1)
                 os.system("pause")
@@ -104,7 +205,6 @@ while True:
                 print("Tente novamente...")
                 sleep(1)
     except:
-        os.system("cls")
         print("Opção inválida!")
         print("Tente novamente...")
         sleep(1)    

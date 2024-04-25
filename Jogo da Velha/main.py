@@ -37,7 +37,7 @@ def jogar1x1():
                         for l in range(0, 3):
                             for c in range(0, 3):
                                 if op == matriz_principal[l][c]:
-                                    matriz_principal[l][c] = 'X'
+                                    matriz_principal[l][c] = '\033[32mX\033[m'
                                     jogadas+=1
                                     x+=1
                                     break
@@ -61,7 +61,7 @@ def jogar1x1():
                         for l in range(0, 3):
                             for c in range(0, 3):
                                 if op == matriz_principal[l][c]:
-                                    matriz_principal[l][c] = 'O'
+                                    matriz_principal[l][c] = '\033[31mO\033[m'
                                     jogadas+=1
                                     x+=1
                                     break
@@ -86,9 +86,9 @@ def jogar1x1():
             cont_x = 0
             cont_o = 0
             for c in range(0, 3):
-                if matriz_principal[l][c] == 'X':
+                if matriz_principal[l][c] == '\033[32mX\033[m':
                     cont_x += 1
-                elif matriz_principal[l][c] == 'O':
+                elif matriz_principal[l][c] == '\033[31mO\033[m':
                     cont_o += 1                  
             if cont_x == 3:
                 os.system("cls")
@@ -110,9 +110,9 @@ def jogar1x1():
             cont_x = 0
             cont_o = 0
             for l in range(0, 3):
-                if matriz_principal[l][c] == 'X':
+                if matriz_principal[l][c] == '\033[32mX\033[m':
                     cont_x += 1
-                elif matriz_principal[l][c] == 'O':
+                elif matriz_principal[l][c] == '\033[31mO\033[m':
                     cont_o += 1
             if cont_x == 3:
                 os.system("cls")
@@ -133,9 +133,9 @@ def jogar1x1():
         for l in range(0, 3):
             for c in range(0, 3):
                 if l == c:
-                    if matriz_principal[l][c] == 'X':
+                    if matriz_principal[l][c] == '\033[32mX\033[m':
                         cont_x += 1
-                    elif matriz_principal[l][c] == 'O':
+                    elif matriz_principal[l][c] == '\033[31mO\033[m':
                         cont_o += 1
             if cont_x == 3:
                 os.system("cls")
@@ -156,9 +156,9 @@ def jogar1x1():
         for l in range(0, 3):
             for c in range(0, 3):
                 if (l == 0 and c == 2) or (l == 1 and c == 1) or (l == 2 and c == 0):
-                    if matriz_principal[l][c] == 'X':
+                    if matriz_principal[l][c] == '\033[32mX\033[m':
                         cont_x += 1
-                    elif matriz_principal[l][c] == 'O':
+                    elif matriz_principal[l][c] == '\033[31mO\033[m':
                         cont_o += 1
             if cont_x == 3:
                 os.system("cls")
@@ -217,7 +217,7 @@ def computador():
                                 for l in range(0, 3):
                                     for c in range(0, 3):
                                         if op == matriz_principal[l][c]:
-                                            matriz_principal[l][c] = 'X'
+                                            matriz_principal[l][c] = '\033[32mX\033[m'
                                             jogadas+=1
                                             x+=1
                                             break
@@ -235,7 +235,7 @@ def computador():
                             for l in range(0, 3):
                                 for c in range(0, 3):
                                     if op == matriz_principal[l][c]:
-                                        matriz_principal[l][c] = 'O'
+                                        matriz_principal[l][c] = '\033[31mO\033[m'
                                         jogadas+=1
                                         x+=1
                                         break
@@ -259,9 +259,9 @@ def computador():
                     cont_x = 0
                     cont_o = 0
                     for c in range(0, 3):
-                        if matriz_principal[l][c] == 'X':
+                        if matriz_principal[l][c] == '\033[32mX\033[m':
                             cont_x += 1
-                        elif matriz_principal[l][c] == 'O':
+                        elif matriz_principal[l][c] == '\033[31mO\033[m':
                             cont_o += 1                  
                     if cont_x == 3:
                         os.system("cls")
@@ -283,9 +283,9 @@ def computador():
                     cont_x = 0
                     cont_o = 0
                     for l in range(0, 3):
-                        if matriz_principal[l][c] == 'X':
+                        if matriz_principal[l][c] == '\033[32mX\033[m':
                             cont_x += 1
-                        elif matriz_principal[l][c] == 'O':
+                        elif matriz_principal[l][c] == '\033[31mO\033[m':
                             cont_o += 1
                     if cont_x == 3:
                         os.system("cls")
@@ -306,9 +306,9 @@ def computador():
                 for l in range(0, 3):
                     for c in range(0, 3):
                         if l == c:
-                            if matriz_principal[l][c] == 'X':
+                            if matriz_principal[l][c] == '\033[32mX\033[m':
                                 cont_x += 1
-                            elif matriz_principal[l][c] == 'O':
+                            elif matriz_principal[l][c] == '\033[31mO\033[m':
                                 cont_o += 1
                     if cont_x == 3:
                         os.system("cls")
@@ -329,9 +329,9 @@ def computador():
                 for l in range(0, 3):
                     for c in range(0, 3):
                         if (l == 0 and c == 2) or (l == 1 and c == 1) or (l == 2 and c == 0):
-                            if matriz_principal[l][c] == 'X':
+                            if matriz_principal[l][c] == '\033[32mX\033[m':
                                 cont_x += 1
-                            elif matriz_principal[l][c] == 'O':
+                            elif matriz_principal[l][c] == '\033[31mO\033[m':
                                 cont_o += 1
                     if cont_x == 3:
                         os.system("cls")
@@ -381,7 +381,7 @@ def computador():
                             for l in range(0, 3):
                                 for c in range(0, 3):
                                     if op == matriz_principal[l][c]:
-                                        matriz_principal[l][c] = 'X'
+                                        matriz_principal[l][c] = '\033[32mX\033[m'
                                         jogadas+=1
                                         x+=1
                                         break
@@ -404,7 +404,7 @@ def computador():
                                 for l in range(0, 3):
                                     for c in range(0, 3):
                                         if op == matriz_principal[l][c]:
-                                            matriz_principal[l][c] = 'O'
+                                            matriz_principal[l][c] = '\033[31mO\033[m'
                                             jogadas+=1
                                             x+=1
                                             break
@@ -429,9 +429,9 @@ def computador():
                     cont_x = 0
                     cont_o = 0
                     for c in range(0, 3):
-                        if matriz_principal[l][c] == 'X':
+                        if matriz_principal[l][c] == '\033[32mX\033[m':
                             cont_x += 1
-                        elif matriz_principal[l][c] == 'O':
+                        elif matriz_principal[l][c] == '\033[31mO\033[m':
                             cont_o += 1                  
                     if cont_x == 3:
                         os.system("cls")
@@ -453,9 +453,9 @@ def computador():
                     cont_x = 0
                     cont_o = 0
                     for l in range(0, 3):
-                        if matriz_principal[l][c] == 'X':
+                        if matriz_principal[l][c] == '\033[32mX\033[m':
                             cont_x += 1
-                        elif matriz_principal[l][c] == 'O':
+                        elif matriz_principal[l][c] == '\033[31mO\033[m':
                             cont_o += 1
                     if cont_x == 3:
                         os.system("cls")
@@ -476,9 +476,9 @@ def computador():
                 for l in range(0, 3):
                     for c in range(0, 3):
                         if l == c:
-                            if matriz_principal[l][c] == 'X':
+                            if matriz_principal[l][c] == '\033[32mX\033[m':
                                 cont_x += 1
-                            elif matriz_principal[l][c] == 'O':
+                            elif matriz_principal[l][c] == '\033[31mO\033[m':
                                 cont_o += 1
                     if cont_x == 3:
                         os.system("cls")
@@ -499,9 +499,9 @@ def computador():
                 for l in range(0, 3):
                     for c in range(0, 3):
                         if (l == 0 and c == 2) or (l == 1 and c == 1) or (l == 2 and c == 0):
-                            if matriz_principal[l][c] == 'X':
+                            if matriz_principal[l][c] == '\033[32mX\033[m':
                                 cont_x += 1
-                            elif matriz_principal[l][c] == 'O':
+                            elif matriz_principal[l][c] == '\033[31mO\033[m':
                                 cont_o += 1
                     if cont_x == 3:
                         os.system("cls")

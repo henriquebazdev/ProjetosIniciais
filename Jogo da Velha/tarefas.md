@@ -14,5 +14,5 @@ _**Implementações**_
 
 ---
 
-- [ ] Cores
+- [x] Cores
 - [x] Tratamento de exceções

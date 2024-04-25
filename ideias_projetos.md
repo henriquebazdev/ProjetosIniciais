@@ -7,7 +7,7 @@
 
 
 
-- [ ] Jogo da Velha
+- [x] Jogo da Velha
   - [x] Opção de jogar contrar o PC
   
     

@@ -12,17 +12,11 @@
   
     
 
-- [ ] Sudoku
-
-  - [ ] Criar uma opção de imprimir 
-  - [ ] Medidor de tempo de resolução
-  - [ ] Sistema de pontuação com base de dados
-
   
-
   
-
   
-
+  
+  
+  
   
 

@@ -2,6 +2,7 @@ import os
 from time import sleep
 from random import randint
 
+
 def jogar1x1():
     os.system("cls")
     matriz_principal = [[1, 2, 3], [4, 5 , 6], [7, 8, 9]]
@@ -521,7 +522,6 @@ def computador():
                     os.system("pause")
                     continuar = 'N'
                     break
-
 
 
 #Menu inicial

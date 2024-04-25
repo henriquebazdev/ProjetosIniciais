@@ -6,7 +6,6 @@ _**Menu**_
 
 - [x] Jogador 1 x Jogador 2
 - [x] Jogar contra o computador
-- [ ] Jogar contra uma IA
 - [ ] Modo Competição
 - [ ] Sair
 

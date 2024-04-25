@@ -8,10 +8,9 @@
 
 
 - [ ] Jogo da Velha
-  - [ ] Opção de jogar contrar o PC
-  - [ ] Tentar implementar uma IA para jogar
-
-
+  - [x] Opção de jogar contrar o PC
+  
+    
 
 - [ ] Sudoku
 
